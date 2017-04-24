@@ -7,6 +7,4 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
-app.listen('8000', function() {
-    console.log("yo yo yo, on 8000 bro");
-});
+app.listen(process.env.PORT || '8080');
